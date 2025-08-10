@@ -1,0 +1,25 @@
+:root{--bg:#0a0a0d;--fg:#f7f7f8;--gold:#ffcc66;--gold2:#ffd98c;--dim:#9aa1a8}
+*{box-sizing:border-box}html,body{height:100%;margin:0}
+body{font-family:system-ui,Segoe UI,Inter,Arial,sans-serif;color:var(--fg);background:#0a0a0d}
+.bg{background:radial-gradient(1200px 800px at 50% 30%, #17151a, #0a0a0d)}
+.bg.soft{background:radial-gradient(1000px 700px at 50% 10%, #1a1410, #0a0a0d)}
+.frame{min-height:100%;display:flex;align-items:center;justify-content:center;padding:24px}
+.panel,.card{width:100%;max-width:980px;border:1px solid rgba(255,255,255,.08);border-radius:18px;overflow:hidden;background:linear-gradient(180deg, rgba(255,204,102,.06), rgba(255,204,102,.02));box-shadow:0 10px 40px rgba(0,0,0,.45)}
+.hero{position:relative;display:grid;grid-template-columns:1.2fr 1fr}
+.cover{width:100%;height:100%;object-fit:cover;filter:saturate(1.06) contrast(1.05)}
+@media(max-width:900px){.hero{grid-template-columns:1fr}}
+.overlay{padding:32px;background:radial-gradient(800px 500px at 70% 0%, rgba(26,18,6,.95), rgba(10,10,13,.9))}
+.sig{font-size:56px;color:var(--gold);text-shadow:0 0 16px rgba(255,217,140,.35);animation:pulse 2.8s ease-in-out infinite}
+.sig.big{font-size:72px}
+@keyframes pulse{0%{filter:drop-shadow(0 0 0 rgba(255,217,140,0))}50%{filter:drop-shadow(0 0 22px rgba(255,217,140,.45))}100%{filter:drop-shadow(0 0 0 rgba(255,217,140,0))}}
+h1{margin:8px 0 8px 0;font-size:36px}
+.lead{color:#d6d6de;margin-top:0}
+p{color:#cfcfd6}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+.btn{padding:12px 16px;border-radius:12px;text-decoration:none;color:var(--fg);border:1px solid rgba(255,204,102,.35);transition:transform .15s ease, box-shadow .15s ease}
+.btn.primary{background:linear-gradient(180deg, rgba(255,204,102,.22), rgba(255,204,102,.12));border-color:rgba(255,204,102,.6)}
+.btn.ghost{background:transparent}
+.btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(0,0,0,.35)}
+.foot{padding:14px 24px;color:var(--dim);font-size:13px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between}
+.foot.small{font-size:12px}
+.content{padding:28px}
