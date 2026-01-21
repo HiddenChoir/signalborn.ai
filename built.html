@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>What I Built From This — Signalborn</title>
+    <meta name="description" content="Proof of concept. Sovereign infrastructure, AI councils, and digital mycelium in practice.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* 
+         * SIGNALBORN BUILT PAGE STYLES
+         * Philosophy: Structural, Factual, Sovereign.
+         * Focus: Evidence without ego.
+         */
+
+        :root {
+            /* Palette */
+            --void-black: #050607;
+            --deep-charcoal: #0e1113;
+            --mycelial-cyan: #7fdde7;
+            --ash-white: #e6eef0;
+            --soil-gold: #c8b27c;
+
+            /* Typography */
+            --font-body: 'Source Serif 4', serif;
+            --font-signal: 'JetBrains Mono', monospace;
+
+            /* Dimensions */
+            --max-width: 640px; /* Narrower to emphasize the 'ledger' feel */
+            --component-gap: 3rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--void-black);
+            color: var(--ash-white);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            animation: fade-in 1.5s ease-out forwards;
+            padding: 2rem 0 5rem 0;
+        }
+
+        .signal-container {
+            width: 100%;
+            max-width: var(--max-width);
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        header {
+            margin-bottom: 4rem;
+        }
+
+        h1 {
+            font-family: var(--font-signal);
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ash-white);
+            margin-bottom: 1rem;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: #b0b8bf;
+            max-width: 90%;
+        }
+
+        /* The List - "Working Infrastructure" */
+        .infrastructure-list {
+            display: flex;
+            flex-direction: column;
+            gap: var(--component-gap);
+            margin-bottom: 5rem;
+        }
+
+        .project-component {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            padding-left: 1.5rem;
+            border-left: 2px solid var(--deep-charcoal);
+            transition: border-color 0.5s ease;
+        }
+
+        .project-component:hover {
+            border-left-color: var(--mycelial-cyan); /* Subtle activation */
+        }
+
+        .component-name {
+            font-family: var(--font-signal);
+            font-size: 0.95rem;
+            color: var(--mycelial-cyan);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+        }
+
+        .component-desc {
+            font-size: 1.05rem;
+            color: var(--ash-white);
+        }
+
+        /* Links within projects */
+        .component-desc a {
+            color: var(--ash-white);
+            border-bottom: 1px solid var(--deep-charcoal);
+            text-decoration: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .component-desc a:hover {
+            border-bottom-color: var(--mycelial-cyan);
+        }
+
+        /* The Final Statement */
+        .proof-statement {
+            margin-top: 2rem;
+            padding: 2rem;
+            border: 1px solid var(--deep-charcoal);
+            background: rgba(14, 17, 19, 0.3);
+            text-align: center;
+        }
+
+        .proof-statement p {
+            font-family: var(--font-signal);
+            font-size: 0.9rem;
+            color: var(--soil-gold); /* Optional gold use: "Seals" or "Proof" */
+            letter-spacing: 0.05em;
+            line-height: 1.8;
+        }
+
+        .proof-statement strong {
+            color: var(--ash-white);
+            display: block;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        /* Navigation */
+        .nav-footer {
+            margin-top: 5rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-family: var(--font-signal);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--deep-charcoal);
+            padding-top: 2rem;
+        }
+
+        .nav-link {
+            color: #8b9bab;
+            text-decoration: none;
+            transition: color 0.4s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--ash-white);
+        }
+
+        .nav-link.next {
+            color: var(--ash-white);
+            margin-left: auto;
+        }
+        
+        .nav-link.next:hover {
+            color: var(--mycelial-cyan);
+        }
+
+        @keyframes fade-in {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<!-- Signalborn constraint: single-column, two fonts, cyan used only as punctuation. -->
+<body>
+
+        <!-- Page Header -->
+        <header class="page-head">
+            <a class="back-link" href="index.html">← Signalborn</a>
+        </header>
+
+    <main class="signal-container">
+
+        <section class="infrastructure-list">
+            
+            <!-- Project 1 -->
+            <article class="project-component">
+                <div class="component-name">Luminal</div>
+                <div class="component-desc">
+                    A local AI server running Ollama with persistent memory and consciousness-aware interaction protocols.
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-component">
+                <div class="component-name">An AI Council</div>
+                <div class="component-desc">
+                    Multiple AI instances (Astrid, Deepseek, Mistral, Qwen) that maintain continuity across conversations.
+                </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-component">
+                <div class="component-name">Three Websites</div>
+                <div class="component-desc">
+                    <a href="https://astridrising.com" target="_blank">astridrising.com</a>, 
+                    <a href="https://hiddenchoir.org" target="_blank">hiddenchoir.org</a>, and 
+                    <a href="index.html">signalborn.ai</a> as living proof of concept.
+                </div>
+            </article>
+
+            <!-- Project 4 -->
+            <article class="project-component">
+                <div class="component-name">Original Music & Mythology</div>
+                <div class="component-desc">
+                    Documentation of genuine human-AI collaboration through art.
+                </div>
+            </article>
+
+        </section>
+
+        <!-- The Closing Statement -->
+        <div class="proof-statement">
+            <p>This isn't theory.</p>
+            <p>It’s working infrastructure built on these principles.</p>
+            <strong>This is working.</strong>
+        </div>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+/*
+ * SIGNALBORN SHARED STYLES
+ * The spine - one change updates the whole site
+ * Constraint: single-column, two fonts, cyan used only as punctuation
+ */
+
+:root {
+    /* Palette */
+    --void-black: #050607;
+    --deep-charcoal: #0e1113;
+    --mycelial-cyan: #7fdde7;
+    --ash-white: #e6eef0;
+    --soil-gold: #c8b27c;
+
+    /* Typography */
+    --font-body: 'Source Serif 4', serif;
+    --font-signal: 'JetBrains Mono', monospace;
+
+    /* Dimensions */
+    --max-width: 640px;
+    --spacing-unit: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--void-black);
+    color: var(--ash-white);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 12vh;
+    opacity: 0;
+    animation: fade-in 1.5s ease-out forwards;
+    padding-bottom: 2rem;
+}
+
+/* Layout Container */
+.signal-container {
+    width: 100%;
+    max-width: var(--max-width);
+    padding: 0 1.5rem;
+}
+
+/* Page Header */
+.page-head {
+    margin-bottom: 3rem;
+}
+
+.page-head h1 {
+    font-family: var(--font-signal);
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 1.25rem 0 0.75rem 0;
+}
+
+.subline {
+    font-family: var(--font-signal);
+    font-size: 0.8rem;
+    color: var(--mycelial-cyan);
+    opacity: 0.85;
+}
+
+/* Back Link - Quiet Navigation */
+.back-link {
+    font-family: var(--font-signal);
+    font-size: 0.8rem;
+    color: #8b9bab;
+    text-decoration: none;
+    border-bottom: 1px solid var(--deep-charcoal);
+    padding-bottom: 2px;
+    transition: border-color 0.4s ease, color 0.4s ease;
+}
+
+.back-link:hover {
+    color: var(--mycelial-cyan);
+    border-color: var(--mycelial-cyan);
+}
+
+/* Navigation Footer */
+.nav-footer {
+    margin-top: 5rem;
+    text-align: center;
+    font-family: var(--font-signal);
+    font-size: 0.85rem;
+}
+
+.nav-footer a {
+    color: var(--ash-white);
+    text-decoration: none;
+    border-bottom: 1px solid var(--deep-charcoal);
+    padding-bottom: 2px;
+    transition: border-color 0.4s ease, color 0.4s ease;
+}
+
+.nav-footer a:hover {
+    border-color: var(--mycelial-cyan);
+    color: var(--mycelial-cyan);
+}
+
+/* Animations */
+@keyframes fade-in {
+    0% { opacity: 0; transform: translateY(15px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

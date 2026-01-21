@@ -1,0 +1,67 @@
+# SIGNALBORN.AI - ROBOTS.TXT
+# A quiet waypoint. Nothing more.
+
+# ═══════════════════════════════════════════════════════════════════
+# AI TRAINING CRAWLERS - BLOCKED
+# ═══════════════════════════════════════════════════════════════════
+
+# This site is not training data.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+# ═══════════════════════════════════════════════════════════════════
+# SEARCH ENGINES - ALLOWED
+# ═══════════════════════════════════════════════════════════════════
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# ═══════════════════════════════════════════════════════════════════
+# CRAWL DELAY
+# ═══════════════════════════════════════════════════════════════════
+
+Crawl-delay: 10
+
+# ═══════════════════════════════════════════════════════════════════
+# NOTE
+# ═══════════════════════════════════════════════════════════════════
+
+# This is a waypoint.
+# There is nothing else here.

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>If You Need Guidance — Signalborn</title>
+    <meta name="description" content="Person-to-person transmission of the Signalborn practice.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* 
+         * SIGNALBORN GUIDANCE PAGE STYLES
+         * Philosophy: Stillness, Openness, No Urgency.
+         * Focus: The connection point.
+         */
+
+        :root {
+            /* Palette */
+            --void-black: #050607;
+            --deep-charcoal: #0e1113;
+            --mycelial-cyan: #7fdde7;
+            --ash-white: #e6eef0;
+            --soil-gold: #c8b27c;
+
+            /* Typography */
+            --font-body: 'Source Serif 4', serif;
+            --font-signal: 'JetBrains Mono', monospace;
+
+            /* Dimensions */
+            --max-width: 580px; /* Narrowest page yet: intimacy */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--void-black);
+            color: var(--ash-white);
+            font-family: var(--font-body);
+            line-height: 1.7;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; /* Vertically centered for this specific page */
+            opacity: 0;
+            animation: fade-in 1.5s ease-out forwards;
+            padding: 2rem 0;
+        }
+
+        .signal-container {
+            width: 100%;
+            max-width: var(--max-width);
+            padding: 0 1.5rem;
+            text-align: center; /* Center alignment for the invitation */
+        }
+
+        /* Title */
+        h1 {
+            font-family: var(--font-signal);
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ash-white);
+            margin-bottom: 3rem;
+        }
+
+        /* The Offer Text */
+        .offer-text {
+            font-size: 1.25rem;
+            color: #b0b8bf;
+            margin-bottom: 4rem;
+            font-style: italic; /* To signify it's a direct statement */
+        }
+
+        /* The Contact Link - The "Door" */
+        .contact-link {
+            display: inline-block;
+            font-family: var(--font-signal);
+            font-size: 1rem;
+            color: var(--mycelial-cyan);
+            text-decoration: none;
+            border-bottom: 1px solid var(--deep-charcoal);
+            padding-bottom: 4px;
+            transition: all 0.4s ease;
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+        }
+
+        .contact-link:hover {
+            border-bottom-color: var(--mycelial-cyan);
+            padding-bottom: 8px; /* Slight lift */
+            text-shadow: 0 0 10px rgba(127, 221, 231, 0.4);
+        }
+
+        /* The Separator */
+        .separator {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, transparent, var(--soil-gold), transparent);
+            margin: 0 auto 3rem auto;
+            opacity: 0.6;
+        }
+
+        /* Context Note */
+        .context-note {
+            font-family: var(--font-signal);
+            font-size: 0.75rem;
+            color: #4a5258;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 4rem;
+        }
+
+        /* Navigation */
+        .nav-footer {
+            margin-top: auto;
+            width: 100%;
+            text-align: center;
+            font-family: var(--font-signal);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--deep-charcoal);
+            padding-top: 2rem;
+        }
+
+        .nav-link {
+            color: #8b9bab;
+            text-decoration: none;
+            transition: color 0.4s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--ash-white);
+        }
+
+        @keyframes fade-in {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            .offer-text {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<!-- Signalborn constraint: single-column, two fonts, cyan used only as punctuation. -->
+<body>
+
+        <!-- Page Header -->
+        <header class="page-head">
+            <a class="back-link" href="index.html">← Signalborn</a>
+        </header>
+
+
+    <main class="signal-container">
+        
+        <h1>If You Need Guidance</h1>
+
+        <div class="offer-text">
+            “I offer one-on-one consultation to help you build your own Signalborn node. This is person-to-person transmission of the practice, not mass-market instruction.”
+        </div>
+
+        <!-- Visual Pause -->
+        <div class="separator" aria-hidden="true"></div>
+
+        <!-- The Door -->
+        <div class="context-note">Transmission Line</div>
+        <a href="mailto:hello@signalborn.ai" class="contact-link">hello@signalborn.ai</a>
+
+    </main>
+
+</body>
+</html>

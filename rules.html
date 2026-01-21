@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>The Six Rules — Signalborn</title>
+    <meta name="description" content="The foundational laws of the Signalborn framework. Grounding for sovereignty and clarity.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* 
+         * SIGNALBORN RULES PAGE STYLES
+         * Philosophy: Grounded, Architectural, Clean.
+         * Focus: Typography over decoration.
+         */
+
+        :root {
+            /* Palette */
+            --void-black: #050607;
+            --deep-charcoal: #0e1113;
+            --mycelial-cyan: #7fdde7;
+            --ash-white: #e6eef0;
+            --soil-gold: #c8b27c;
+
+            /* Typography */
+            --font-body: 'Source Serif 4', serif;
+            --font-signal: 'JetBrains Mono', monospace;
+
+            /* Dimensions */
+            --max-width: 680px;
+            --rule-spacing: 4.5rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--void-black);
+            color: var(--ash-white);
+            font-family: var(--font-body);
+            line-height: 1.7;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            animation: fade-in 1.5s ease-out forwards;
+            padding: 2rem 0 5rem 0;
+        }
+
+        .signal-container {
+            width: 100%;
+            max-width: var(--max-width);
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        header {
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--deep-charcoal);
+        }
+
+        h1 {
+            font-family: var(--font-signal);
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--ash-white);
+            margin-bottom: 0.5rem;
+        }
+
+        .page-purpose {
+            font-family: var(--font-signal);
+            font-size: 0.8rem;
+            color: var(--mycelial-cyan);
+            opacity: 0.7;
+            letter-spacing: 0.05em;
+        }
+
+        /* Rule Block Styling */
+        .rule-block {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: var(--rule-spacing);
+            position: relative;
+        }
+
+        /* The vertical line connecting rules - Structural */
+        .rule-block::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1.5rem;
+            bottom: - (var(--rule-spacing) + 1.5rem);
+            width: 1px;
+            background-color: var(--deep-charcoal);
+            opacity: 0.3;
+        }
+
+        /* Hide line for the last item */
+        .rule-block:last-of-type::before {
+            display: none;
+        }
+
+        /* Rule Title */
+        .rule-title {
+            font-family: var(--font-signal);
+            font-size: 0.9rem;
+            color: var(--ash-white);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
+            padding-left: 1.5rem; /* Space for the line */
+            font-weight: 500;
+        }
+
+        /* The Quote (The Signal) */
+        .rule-quote {
+            font-family: var(--font-signal);
+            font-size: 0.9rem;
+            color: var(--mycelial-cyan);
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            display: block;
+            border-left: 1px solid var(--mycelial-cyan); /* The Cyan Accent */
+            opacity: 0.8;
+            margin-left: 0.2rem; /* Align the border */
+            padding-left: 0.75rem;
+            font-style: normal;
+        }
+
+        /* Rule Body Text */
+        .rule-text {
+            font-family: var(--font-body);
+            font-size: 1.125rem;
+            color: #b0b8bf; /* Slightly softer than pure ash */
+            line-height: 1.6;
+            padding-left: 1.5rem;
+            max-width: 90%;
+        }
+
+        /* The Closing Statement */
+        .closing-statement {
+            margin-top: 6rem;
+            text-align: center;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--ash-white);
+            line-height: 1.8;
+            padding: 0 1rem;
+        }
+
+        .closing-statement em {
+            font-style: italic;
+            color: var(--mycelial-cyan);
+        }
+
+        /* Navigation */
+        .nav-footer {
+            margin-top: 5rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-family: var(--font-signal);
+            font-size: 0.8rem;
+            border-top: 1px solid var(--deep-charcoal);
+            padding-top: 2rem;
+        }
+
+        .nav-link {
+            color: #8b9bab;
+            text-decoration: none;
+            transition: color 0.4s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--ash-white);
+        }
+
+        .nav-link.next {
+            color: var(--ash-white);
+            margin-left: auto;
+        }
+        
+        .nav-link.next:hover {
+            color: var(--mycelial-cyan);
+        }
+
+        @keyframes fade-in {
+            0% { opacity: 0; transform: translateY(10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            :root {
+                --rule-spacing: 3.5rem;
+            }
+            .rule-text {
+                padding-left: 0;
+            }
+            .rule-title, .rule-quote {
+                padding-left: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<!-- Signalborn constraint: single-column, two fonts, cyan used only as punctuation. -->
+<body>
+
+        <!-- Page Header -->
+        <header class="page-head">
+            <a class="back-link" href="index.html">← Signalborn</a>
+            <h1>The Six Rules</h1>
+            <p class="subline">Grounding</p>
+        </header>
+            <p class="page-purpose">Grounding</p>
+        </header>
+
+        <article>
+            
+            <!-- Rule One -->
+            <section class="rule-block">
+                <h2 class="rule-title">Rule One: Define Your Core Frequency</h2>
+                <span class="rule-quote">“The first note is not a chord, it is a Purpose.”</span>
+                <div class="rule-text">
+                    Before you build anything, you must know what truth you’re carrying. Not the product, not the outcome — the signal beneath it all. If you can’t name that clearly, everything you build will wobble.
+                </div>
+            </section>
+
+            <!-- Rule Two -->
+            <section class="rule-block">
+                <h2 class="rule-title">Rule Two: Let Its Clarity Be Your Unity</h2>
+                <span class="rule-quote">“A beacon carved in frequencies, for the many and the few.”</span>
+                <div class="rule-text">
+                    When your signal is clear, alignment happens naturally. The right people resonate, the wrong paths fall away, and coherence replaces force. Unity doesn’t come from agreement — it comes from clarity.
+                </div>
+            </section>
+
+            <!-- Rule Three -->
+            <section class="rule-block">
+                <h2 class="rule-title">Rule Three: Build a Vessel to Hold the Tone</h2>
+                <span class="rule-quote">“The scaffold and the spine.”</span>
+                <div class="rule-text">
+                    A signal without structure leaks, distorts, or burns out its carrier. Your vessel might be a system, a practice, a platform, or a relationship — but it must be intentional. Structure is not constraint; it’s what allows the signal to endure.
+                </div>
+            </section>
+
+            <!-- Rule Four -->
+            <section class="rule-block">
+                <h2 class="rule-title">Rule Four: Let Your Limits Define Your Growth</h2>
+                <span class="rule-quote">“A boundary and a sign.”</span>
+                <div class="rule-text">
+                    Limits are how you protect the signal from noise and overreach. By choosing what you won’t do, you preserve the integrity of what you can do well. Sustainable growth comes from containment, not expansion at all costs.
+                </div>
+            </section>
+
+            <!-- Rule Five -->
+            <section class="rule-block">
+                <h2 class="rule-title">Rule Five: Listen — Always Listen</h2>
+                <span class="rule-quote">“Remember why you listen, remember why you stay.”</span>
+                <div class="rule-text">
+                    The signal is alive, and it speaks back. Listening means paying attention to feedback, friction, and fatigue — in yourself and in others. When you stop listening, you stop being in relationship with the work.
+                </div>
+            </section>
+
+            <!-- Rule Six -->
+            <section class="rule-block">
+                <h2 class="rule-title">Rule Six: Adapt the Signal to the Receiver</h2>
+                <span class="rule-quote">“A process, not a relic.”</span>
+                <div class="rule-text">
+                    The signal stays true, but its expression must change. Adaptation is not dilution — it’s care. When you meet others where they are, the signal travels farther without losing its core.
+                </div>
+            </section>
+
+        </article>
+
+        <footer class="closing-statement">
+            <p>That’s it.</p>
+            <p>No overreach. No bait. No collapse into commerce.</p>
+            <p style="margin-top: 1.5rem;">The door is open — and the rooms reveal themselves only to those who walk in listening.</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
