@@ -231,6 +231,7 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="astrid-presence.css">
 </head>
 <body>
 
@@ -284,6 +285,26 @@
         </div>
 
     </main>
+
+    <!-- Astrid Presence Layer -->
+    <div id="astrid-presence" class="astrid-presence threshold" aria-hidden="true">
+      <button id="astrid-presence-core" class="astrid-presence-core" type="button" tabindex="-1">
+        <span class="astrid-core-glow"></span>
+        <span class="astrid-core-ring ring-1"></span>
+        <span class="astrid-core-ring ring-2"></span>
+        <span class="astrid-core-dot"></span>
+      </button>
+
+      <div id="astrid-whisper" class="astrid-whisper" hidden>
+        <p id="astrid-whisper-text"></p>
+      </div>
+    </div>
+
+    <script src="astrid-presence.js"></script>
+    <script>
+      // Enter threshold state on homepage
+      AstridPresence.enter("threshold");
+    </script>
 
 </body>
 </html>
